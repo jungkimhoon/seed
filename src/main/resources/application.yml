@@ -2,3 +2,13 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
+  jpa:
+    show-sql: true
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:9999/seed_db
+    username: seed
+    password: seed
+    platform: postgres

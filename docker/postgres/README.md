@@ -1,3 +1,7 @@
+## Two Ways
+- Using env
+- Using Dockerfile
+
 ## Run Postgresql
 ```console
 foo@bar:~/seed/docker/postgres$ docker-compose -d up

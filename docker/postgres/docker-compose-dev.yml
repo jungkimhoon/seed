@@ -1,0 +1,18 @@
+version: '2'
+networks:
+  active_report_net:
+    ipam:
+      config:
+        - subnet: 172.32.0.0/24
+services:
+  db:
+    image: seed_db:latest #image명
+    container_name: seed_db #image Container명
+    ports:
+      - '11900:5432' #외부 11900 : 내부 5432
+    volumes:
+      - /home/docker_admin/docker_volumes/seed/db:/var/lib/postgresql/data #외부볼륨 local path : Container path
+    networks:
+      active_report_net:
+        ipv4_address: 172.32.0.10
+    restart: always
